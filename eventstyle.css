@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.dark p,.dark h3
+{
+    color: #000;
+}
+.dark .section .leftBox .content p
+{
+    color: #fff;
+}
+.section
+{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+.section .leftBox
+{
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.section .leftBox .content
+{
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    transition: 0.5s;
+}
+.section .leftBox .content:hover
+{
+    background: #e91e63;
+}
+.section .leftBox .content h1
+{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.section .leftBox .content h1 sup
+{
+    font-size: 26px;
+}
+.section .leftBox .content p
+{
+    margin: 10px 0 0;
+    padding: 0;
+}
+.section .events
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    float: right;
+    margin-top: 2%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.section .events ul
+{
+    position: absolute;
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.section .events ul li
+{
+    list-style: none;
+    background: #fff;
+    box-sizing: border-box;
+    height: 200px;
+    margin: 15px 0;
+}
+.section .events ul li .time
+{
+    position: relative;
+    padding: 20px;
+    background: #262626;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    transition: 0.5s;
+}
+.section .events ul li:hover .time
+{
+    background: #e91e63;
+}
+.section .events ul li .time h2
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 30px;
+    line-height: 30px;
+}
+.section .events ul li .time h2 span
+{
+    font-size: 30px;
+}
+.section .events ul li .details
+{
+    padding: 20px;
+    background: #fff;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+.section .events ul li .details h3
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+.section .events ul li .details p
+{
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 16px;
+}
+.section .events ul li .details a
+{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border: 2px solid #262626;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.section .events ul li .details a:hover
+{
+    background: #e91e63;
+    color: #fff;
+    border-color: #e91e63;
+}
+.section .leftBox .eventListNon
+{
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+.section .leftBox .eventListNon.reveal
+{
+    opacity: 1;
+    visibility: visible;
+    
+}
+.section .leftBox .eventListLab
+{
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+.section .leftBox .eventListLab.reveal
+{
+    opacity: 1;
+    visibility: visible;
+}
+.section .events::-webkit-scrollbar
+{
+    width: 4px;
+}
+.section .events::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(transparent,#fff);
+    
+}
+.section .events::-webkit-scrollbar-thumb:hover
+{
+    background: linear-gradient(transparent,#e91e63);
+}
+
+@media (max-width: 991px)
+{
+    .section
+    {
+        height: 100vh;
+        background-position: center;
+    }
+    .section .leftBox
+    {
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: 20px;
+        margin-top: 20%;
+    }
+    .section .events
+    {
+        width: 100%;
+        height: auto;
+        background: transparent;
+        float: none;
+    }
+    .section .leftBox .content
+    {
+        padding: 20px;
+    }
+    .section .leftBox .content h1
+    {
+        font-size: 30px;
+    }
+    .section .events ul
+    {
+        position: relative;
+        transform: translateY(0px);
+        padding: 0 20px 20px;
+    }
+    .section .events ul li
+    {
+        height: auto;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .section .events ul li .time
+    {
+        width: 80px;
+        height: 80px;
+        padding: 0;
+    }
+    .section .events ul li .time h2
+    {
+        font-size: 13px;
+        line-height: 24px;
+    }
+    .section .events ul li .time h2 span
+    {
+        font-size: 20px;
+    }
+    .section .events ul li .details
+    {
+        width: 100%;
+        float: none;
+        padding-left: 100px;
+        background: transparent;
+    }
+    .section .events ul li .details a
+    {
+        padding: 5px 10px;
+    }
+}
